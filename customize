@@ -3,12 +3,14 @@
 # Put customizations to your image in this file.
 
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+GITLAB_VERSION=12.8.7
 
 # Exit if any commands fail
 set -o errexit
 
 # Configuring image specific packages
 echo "* Configuring image specific packages.";
+rpm -i https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7/gitlab-ce-${GITLAB_VERSION}-ce.0.el7.x86_64.rpm
 
 # Clean up
 echo "* Cleaning up."

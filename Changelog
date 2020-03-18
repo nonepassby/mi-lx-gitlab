@@ -1,3 +1,4 @@
-lx-gitlab-0.1.0
-* Base image is centos-7-20180323
+lx-gitlab-12.8.7
+* Base image is itime-lx-base-20180323.0
 * Initial release
+* gitlab-ce 12.8.7
