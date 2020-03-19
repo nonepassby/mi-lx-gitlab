@@ -1,0 +1,41 @@
+{
+    "brand": "lx",
+    "image_uuid": "2034bce0-68ff-11ea-977f-7ff392d43fc1",
+    "autoboot": true,
+    "alias": "gitlab01",
+    "hostname": "gitlab01",
+    "dns_domain": "gitlab01",
+    "kernel_version": "3.10.0",
+    "indestructible_zoneroot": true,
+    "resolvers": [
+      "8.8.8.8",
+      "8.8.4.4"
+    ],
+    "max_physical_memory": 8192,
+    "nics": [
+      {
+        "nic_tag": "admin",
+        "ips": ["192.168.1.175/24"],
+        "gateway": "192.168.1.1",
+        "primary": true
+      }
+    ],
+    "filesystems": [
+      {
+        "type": "lofs",
+        "source": "/export/gitlab01/conf",
+        "target": "/etc/gitlab"
+      },
+      {
+        "type": "lofs",
+        "source": "/export/gitlab01/data",
+        "target": "/var/opt/gitlab"
+      },
+      {
+        "type": "lofs",
+        "source": "/export/gitlab01/logs",
+        "target": "/var/log/gitlab"
+      }
+    ]
+}
+  

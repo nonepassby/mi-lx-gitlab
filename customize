@@ -14,6 +14,9 @@ cd /root/
 /usr/bin/wget --no-check-certificate -c -O gitlab-ce-${GITLAB_VERSION}-ce.0.el7.x86_64.rpm https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7/gitlab-ce-${GITLAB_VERSION}-ce.0.el7.x86_64.rpm
 rpm -i gitlab-ce-${GITLAB_VERSION}-ce.0.el7.x86_64.rpm
 
+echo "* Ensure bootstrap will run next time"
+rm -rf /var/lib/bootstrap || true
+
 # Clean up
 echo "* Cleaning up."
 rm -rf /root/*
